@@ -5,23 +5,157 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Team CodeKit</title>
     <link rel="stylesheet" href="css/reset.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css"
+    />
     <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js" defer></script>
   </head>
   <body>
     <div class="container">
       <header class="header">
-        <a class="header__logo" href="/" role="heading" aria-level="1">
-          <img src="images/logo.png" alt="code kit logo" />
+        <!-- link 누르면 main 조작으로 ui 변경 ( page routing X ) -->
+        <a class="header__logo">
+          <h1>
+            <img class="logo-image" src="images/logo.png" alt="code kit logo" />
+          </h1>
         </a>
         <ul class="header__menu">
           <li class="menu__item">
-            <a href="/">about</a>
+            <a class="pretendard">about</a>
           </li>
           <li class="menu__item">
-            <a href="/contact">contact us</a>
+            <a class="pretendard">contact us</a>
           </li>
         </ul>
       </header>
+
+      <main class="main main--about">
+        <article class="main__about">
+          <div class="inner banner">
+            <div class="banner__item banner__item--left">
+              <span class="letter"
+                ><strong class="emphasis">홈 페이지</strong>부터</span
+              >
+              <span class="letter"
+                ><strong class="emphasis">웹 크롤러</strong>까지</span
+              >
+            </div>
+            <div class="banner__item banner__item--right">
+              <span class="letter">아이디어</span>
+              <span class="letter">이제 기다리지 마세요!</span>
+            </div>
+          </div>
+          <div class="inner summary">
+            <p class="summary__text-box">
+              <span class="emphasis letter">최적의 기술로</span>
+              <span class="letter">당신의 아이디어를</span>
+              <span class="letter">구현합니다</span>
+            </p>
+            <ul class="skills">
+              <li>
+                <img src="icons/react-js.png" alt="react icon" />
+              </li>
+              <li>
+                <img src="icons/vue-js.png" alt="vue icon" />
+              </li>
+              <li>
+                <img src="icons/nest-js.png" alt="nest icon" />
+              </li>
+              <li>
+                <img src="icons/webpack.png" alt="webpack icon" />
+              </li>
+              <li>
+                <img src="icons/vite.png" alt="vite icon" />
+              </li>
+              <li>
+                <img
+                  src="icons/analytics-amazon-athena.png"
+                  alt="analytics-amazon-athena icon"
+                />
+              </li>
+              <li>
+                <img src="icons/django.png" alt="django icon" />
+              </li>
+              <li>
+                <img src="icons/flask.png" alt="flask icon" />
+              </li>
+              <li>
+                <img src="icons/aws-cloudwatch.png" alt="aws-cloudwatch icon" />
+              </li>
+              <li>
+                <img src="icons/fast-api.png" alt="fast-api icon" />
+              </li>
+              <li>
+                <img src="icons/aws-dynamodb.png" alt="aws-dynamodb icon" />
+              </li>
+              <li>
+                <img src="icons/jotai.png" alt="jotai icon" />
+              </li>
+              <li>
+                <img src="icons/recoil.png" alt="recoil icon" />
+              </li>
+              <li>
+                <img src="icons/elastic-search.png" alt="elastic-search icon" />
+              </li>
+              <li>
+                <img src="icons/redux.png" alt="redux icon" />
+              </li>
+              <li>
+                <img src="icons/aws-ec2.png" alt="aws-ec2 icon" />
+              </li>
+              <li>
+                <img src="icons/aws-lambda.png" alt="aws-lambda icon" />
+              </li>
+              <li>
+                <img
+                  src="icons/aws-sqs-simple-queue-service.png"
+                  alt="aws-sqs-simple-queue-service icon"
+                />
+              </li>
+              <li>
+                <img src="icons/ant-design.png" alt="ant-design icon" />
+              </li>
+              <li>
+                <img src="icons/element.png" alt="element icon" />
+              </li>
+              <li>
+                <img src="icons/material-ui.png" alt="material-ui icon" />
+              </li>
+              <li>
+                <img
+                  src="icons/styled-components.png"
+                  alt="styled-components icon"
+                />
+              </li>
+              <li>
+                <img src="icons/tailwind-css.png" alt="tailwind-css icon" />
+              </li>
+              <li>
+                <img
+                  src="icons/database-amazon-rds.png"
+                  alt="database-amazon-rds icon"
+                />
+              </li>
+            </ul>
+          </div>
+        </article>
+        <article class="main__contact"></article>
+      </main>
+
+      <footer class="footer">
+        <img class="logo-image" src="images/logo.png" alt="code kit logo" />
+        <span class="pretendard">&copy; All rights reserved.</span>
+      </footer>
     </div>
   </body>
 </html>
