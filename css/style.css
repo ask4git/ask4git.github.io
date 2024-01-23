@@ -165,7 +165,42 @@ a {
 }
 
 .summary .skills img {
-  width: 100%;
+  max-width: 100%;
+}
+
+.portfolio {
+  padding: 18rem 0;
+}
+
+.portfolio .portfolio-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  flex: 1;
+}
+
+.portfolio .portfolio-list__item {
+  border: 1px solid #d3d3d3;
+  border-radius: 12px;
+  box-shadow: 0px 4px 16px 0px #0000003d;
+  padding: 12px 24px;
+  width: 248px;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.portfolio .portfolio-list img {
+  max-width: 100%;
+}
+
+.portfolio .portfolio-list .strange-ratio img {
+  max-width: 30%;
+}
+
+.portfolio .summary__text-box {
+  padding-left: 10rem;
 }
 
 .footer {
@@ -177,6 +212,6 @@ a {
 }
 
 .footer .logo-image {
-  width: 100%;
+  max-width: 100%;
   max-width: 241px;
 }
