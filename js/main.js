@@ -3,6 +3,8 @@ const SHOWING_CONTACT_CLASS_NAME = "main--contact"
 
 const mainEl = document.querySelector(".main")
 const menuEl = document.querySelector(".header__menu")
+const logoEl = document.querySelector(".header__logo")
+const formEl = document.querySelector(".form-box__form")
 
 menuEl.addEventListener("click", (e) => {
   const linkEl = e.target
@@ -16,4 +18,13 @@ menuEl.addEventListener("click", (e) => {
     mainEl.classList.remove(SHOWING_ABOUT_CLASS_NAME)
     mainEl.classList.add(SHOWING_CONTACT_CLASS_NAME)
   }
+})
+
+logoEl.addEventListener("click", () => {
+  mainEl.classList.add(SHOWING_ABOUT_CLASS_NAME)
+  mainEl.classList.remove(SHOWING_CONTACT_CLASS_NAME)
+})
+
+formEl.addEventListener("submit", (e) => {
+  e.preventDefault()
 })

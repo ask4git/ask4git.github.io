@@ -26,12 +26,14 @@ body {
 a {
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
 }
 
 button {
   cursor: pointer;
   outline: none;
   border: 0;
+  background-color: transparent;
 }
 
 .pretendard {
@@ -112,6 +114,14 @@ button {
   font-size: 24px;
 }
 
+.main {
+  background: linear-gradient(
+    178.11deg,
+    rgba(255, 255, 255, 0.14) -6.92%,
+    rgba(0, 0, 0, 0.14) 123.19%
+  );
+}
+
 .main.main--about .main__about {
   display: block;
 }
@@ -122,6 +132,7 @@ button {
 
 .main.main--contact .main__contact {
   display: block;
+  padding: 18px 0;
 }
 
 .main.main--about .main__contact {
@@ -284,6 +295,84 @@ button {
   bottom: 0;
   right: 200px;
   width: 280px;
+}
+
+.inner__form-box {
+  background-color: #fff;
+  border-radius: 1rem;
+}
+
+.inner__form-box h2 {
+  font-size: var(--medium);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.form-box__form {
+  padding: 2rem 0;
+  max-width: 1120px;
+  margin: auto;
+}
+
+.form__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.form__item label {
+  font-weight: var(--semi-bold);
+  color: #000000;
+  font-size: var(--xx-small);
+}
+
+.form__item input {
+  outline: none;
+  border: 1px solid #e2e2e2;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  width: 410px;
+}
+
+.form__item input.large {
+  width: 980px;
+}
+
+.form__item input::placeholder {
+  font-size: 1rem;
+  font-weight: var(--normal);
+  color: #999;
+  font-family: "Pretendard Variable", Pretendard, -apple-system,
+    BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
+    "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+
+.form__item button {
+  box-shadow: 0px 4px 16px 0px #0000003d;
+  background-color: #7e02ff;
+  border-radius: 38px;
+  width: 152px;
+  height: 61px;
+  display: flex;
+  margin: 2rem auto 0;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: var(--semi-bold);
+  font-size: var(--x-small);
+}
+
+.form__grid-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.form__required::after {
+  content: "*";
+  color: #f00;
 }
 
 .footer {
