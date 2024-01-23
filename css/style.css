@@ -10,6 +10,8 @@
   --large: 4.5rem; /* 72px */
   --x-large: 5rem; /* 80px */
   --xx-large: 6rem; /* 96px */
+
+  --text-color: #252525;
 }
 
 * {
@@ -18,11 +20,18 @@
 
 body {
   font-family: "Noto Sans KR", sans-serif;
+  color: var(--text-color);
 }
 
 a {
   text-decoration: none;
   color: inherit;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+  border: 0;
 }
 
 .pretendard {
@@ -52,7 +61,7 @@ a {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 101%;
+  width: 100%;
   background-color: #7d00ff4d;
   height: 50%;
 }
@@ -201,6 +210,80 @@ a {
 
 .portfolio .summary__text-box {
   padding-left: 10rem;
+}
+
+.lead-contact {
+  position: relative;
+  height: 880px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lead-contact__text-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
+}
+
+.lead-contact__text-box p {
+  font-size: var(--x-large);
+  font-weight: var(--semi-bold);
+}
+
+.lead-contact__text-box button {
+  background-color: #7e02ff;
+  border-radius: 2rem;
+  width: 234px;
+  height: 76px;
+  box-shadow: 0px 4px 16px 0px #0000003d;
+}
+
+.lead-contact__text-box button span {
+  font-weight: var(--semi-bold);
+  font-size: var(--small);
+  color: #fff;
+  position: relative;
+  display: block;
+  margin-right: 10px;
+}
+
+.lead-contact__text-box button span::after {
+  content: "";
+  background: url("../icons/right-arrow.png") no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  width: 24px;
+  height: 24px;
+  transform: translateY(-50%);
+}
+
+.lead-contact > img {
+  position: absolute;
+}
+
+.lead-contact > img:nth-of-type(1) {
+  top: 0;
+  left: 300px;
+  width: 160px;
+}
+.lead-contact > img:nth-of-type(2) {
+  top: 66px;
+  right: 300px;
+  width: 187px;
+}
+.lead-contact > img:nth-of-type(3) {
+  bottom: 0;
+  left: 130px;
+  width: 460px;
+}
+.lead-contact > img:nth-of-type(4) {
+  bottom: 0;
+  right: 200px;
+  width: 280px;
 }
 
 .footer {
