@@ -226,40 +226,73 @@
               <form class="form-box__form">
                 <div class="form__grid-box">
                   <div class="form__item">
-                    <label class="form__required">조직명</label>
-                    <input type="text" placeholder="e.g. ) team codekit" />
+                    <label for="team-name" class="form__required">조직명</label>
+                    <input
+                      id="team-name"
+                      type="text"
+                      placeholder="e.g. ) team codekit"
+                      name="team-name"
+                    />
                   </div>
                   <div class="form__item">
-                    <label class="form__required">담당자명</label>
-                    <input type="text" placeholder="e.g. ) 김코드" />
+                    <label class="form__required" for="manager-name"
+                      >담당자명</label
+                    >
+                    <input
+                      id="manager-name"
+                      type="text"
+                      placeholder="e.g. ) 김코드"
+                      name="manager-name"
+                    />
                   </div>
                   <div class="form__item">
-                    <label class="form__required">휴대폰번호</label>
-                    <input type="tel" placeholder="e.g. ) 010-1234-1234" />
+                    <label for="phone-number" class="form__required"
+                      >휴대폰번호</label
+                    >
+                    <input
+                      id="phone-number"
+                      type="tel"
+                      placeholder="e.g. ) 010-1234-1234"
+                      name="phone-number"
+                    />
                   </div>
                   <div class="form__item">
-                    <label class="form__required">이메일</label>
-                    <input type="email" placeholder="e.g. ) ask@codekit.im" />
+                    <label for="email" class="form__required">이메일</label>
+                    <input
+                      type="email"
+                      placeholder="e.g. ) ask@codekit.im"
+                      name="email"
+                      id="email"
+                    />
                   </div>
                   <div class="form__item">
-                    <label>회사연락처</label>
-                    <input type="tel" placeholder="e.g. ) 02-5678-5678" />
+                    <label for="company-contact">회사연락처</label>
+                    <input
+                      type="tel"
+                      placeholder="e.g. ) 02-5678-5678"
+                      name="company-contact"
+                      id="company-contact"
+                    />
                   </div>
                 </div>
                 <div class="form__item">
-                  <label>기존 서비스</label>
+                  <label for="existing-services">기존 서비스</label>
                   <input
                     class="large"
                     type="text"
                     placeholder="e.g. ) about.codekit.im"
+                    id="existing-services"
+                    name="existing-services"
                   />
                 </div>
                 <div class="form__item">
-                  <label>참고 서비스</label>
+                  <label for="reference-services">참고 서비스</label>
                   <input
                     class="large"
                     type="text"
                     placeholder="e.g. ) make.codekit.im"
+                    name="reference-services"
+                    id="reference-services"
                   />
                 </div>
                 <div class="form__item">
@@ -275,6 +308,10 @@
         <img class="logo-image" src="images/logo.png" alt="code kit logo" />
         <span class="pretendard">&copy; All rights reserved.</span>
       </footer>
+
+      <div class="overlay">
+        <div class="loading"></div>
+      </div>
     </div>
   </body>
 </html>
