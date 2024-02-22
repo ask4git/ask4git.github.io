@@ -1,22 +1,27 @@
-"use client";
+"use client"
 
-import { useContext } from "react";
-import Image from "next/image";
-import { motion, useAnimation } from "framer-motion";
+import { useContext } from "react"
+import Image from "next/image"
+import { useRouter } from "next/navigation"
+import { motion, useAnimation } from "framer-motion"
 
-import { MainContext } from "@/contexts/main";
-import { useRouter } from "next/navigation";
+import { MainContext } from "@/contexts/main"
+
+import thorusKnot from "@/assets/icons/thorus_knot.png"
+import continuousSphere from "@/assets/icons/continuous-sphere.png"
+import helix from "@/assets/icons/helix.png"
+import sphere from "@/assets/icons/sphere.png"
 
 const shakeAnimation = {
   rotate: [0, 4, -6, 1, -2, 0], // 회전
   transition: { duration: 0.7 },
-};
+}
 
 export const LeadContact = () => {
-  const { pageScrollY } = useContext(MainContext);
-  const router = useRouter();
+  const { pageScrollY } = useContext(MainContext)
+  const router = useRouter()
 
-  const controls = useAnimation();
+  const controls = useAnimation()
 
   return (
     <div className="h-lvh relative">
@@ -34,7 +39,7 @@ export const LeadContact = () => {
       >
         <Image
           fill
-          src="/icons/thorus_knot.png"
+          src={thorusKnot}
           alt="thorus_knot icon"
           sizes="(max-width: 100%)"
         />
@@ -57,7 +62,7 @@ export const LeadContact = () => {
       >
         <Image
           fill
-          src="/icons/continuous sphere.png"
+          src={continuousSphere}
           alt="continuous sphere icon"
           sizes="(max-width: 100%)"
         />
@@ -78,12 +83,7 @@ export const LeadContact = () => {
         }}
         className="w-96 h-64 absolute left-32 bottom-0"
       >
-        <Image
-          fill
-          src="/icons/helix.png"
-          alt="helix icon"
-          sizes="(max-width: 100%)"
-        />
+        <Image fill src={helix} alt="helix icon" sizes="(max-width: 100%)" />
       </motion.div>
       <motion.div
         initial={{
@@ -101,12 +101,7 @@ export const LeadContact = () => {
         }}
         className="w-64 h-44 absolute right-48 bottom-0"
       >
-        <Image
-          fill
-          src="/icons/sphere.png"
-          alt="sphere icon"
-          sizes="(max-width: 100%)"
-        />
+        <Image fill src={sphere} alt="sphere icon" sizes="(max-width: 100%)" />
       </motion.div>
       <motion.p className="absolute text-[5rem] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-bold">
         {textArray.map((value, index) => {
@@ -125,7 +120,7 @@ export const LeadContact = () => {
             >
               {value}
             </motion.span>
-          );
+          )
         })}
       </motion.p>
       <motion.button
@@ -150,7 +145,7 @@ export const LeadContact = () => {
         onMouseLeave={() => controls.start({ scale: 1, rotate: 0 })}
         className="bg-[#7e02ff] rounded-[2rem] flex items-center justify-center w-56 h-16 text-white absolute cursor-pointer text-[2rem] font-bold top-1/2 left-1/2 -translate-x-1/2 translate-y-24"
         onClick={() => {
-          router.push("/contact");
+          router.push("/contact")
           // new Promise(() => {
           //   scrollTo({
           //     top: 0,
@@ -162,8 +157,8 @@ export const LeadContact = () => {
         시작하기
       </motion.button>
     </div>
-  );
-};
+  )
+}
 
-const text = "지금 바로 시작해보세요!";
-const textArray = Array.from(text);
+const text = "지금 바로 시작해보세요!"
+const textArray = Array.from(text)

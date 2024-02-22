@@ -4,9 +4,8 @@ import { Noto_Sans_KR } from "next/font/google"
 import { cn } from "@/lib"
 
 import "./globals.css"
+
 import { MainContextProvider } from "@/contexts/main"
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
 
 const notoSansKR = Noto_Sans_KR({ subsets: ["latin"] })
 
@@ -82,11 +81,7 @@ export default function RootLayout({
           notoSansKR.className
         )}
       >
-        <MainContextProvider>
-          <Header />
-          {children}
-          <Footer />
-        </MainContextProvider>
+        <MainContextProvider>{children}</MainContextProvider>
       </body>
     </html>
   )

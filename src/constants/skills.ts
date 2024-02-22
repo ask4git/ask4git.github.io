@@ -1,98 +1,123 @@
+import reactIcon from "@/assets/icons/react-js.png"
+import vueIcon from "@/assets/icons/vue-js.png"
+import nestIcon from "@/assets/icons/nest-js.png"
+import webpackIcon from "@/assets/icons/webpack.png"
+import viteIcon from "@/assets/icons/vite.png"
+import analyticsAmazonAthenaIcon from "@/assets/icons/analytics-amazon-athena.png"
+import djangoIcon from "@/assets/icons/django.png"
+import flaskIcon from "@/assets/icons/flask.png"
+import awsCloudwatchIcon from "@/assets/icons/aws-cloudwatch.png"
+import fastApiIcon from "@/assets/icons/fast-api.png"
+import awsDynamodbIcon from "@/assets/icons/aws-dynamodb.png"
+import jotaiIcon from "@/assets/icons/jotai.png"
+import recoilIcon from "@/assets/icons/recoil.png"
+import elasticSearchIcon from "@/assets/icons/elastic-search.png"
+import reduxIcon from "@/assets/icons/redux.png"
+import awsEc2Icon from "@/assets/icons/aws-ec2.png"
+import awsLambdaIcon from "@/assets/icons/aws-lambda.png"
+import awsSqsSimpleQueueServiceIcon from "@/assets/icons/aws-sqs-simple-queue-service.png"
+import antDIcon from "@/assets/icons/ant-design.png"
+import elementIcon from "@/assets/icons/element.png"
+import materialUiIcon from "@/assets/icons/material-ui.png"
+import styledComponentsIcon from "@/assets/icons/styled-components.png"
+import tailwindCssIcon from "@/assets/icons/tailwind-css.png"
+import databaseAmazonRdsIcon from "@/assets/icons/database-amazon-rds.png"
+
 export const SKILLS = [
   {
-    src: "/icons/react-js.png",
+    src: reactIcon,
     alt: "react icon",
   },
   {
-    src: "/icons/vue-js.png",
+    src: vueIcon,
     alt: "vue icon",
   },
   {
-    src: "/icons/nest-js.png",
+    src: nestIcon,
     alt: "nest icon",
   },
   {
-    src: "/icons/webpack.png",
+    src: webpackIcon,
     alt: "webpack icon",
   },
   {
-    src: "/icons/vite.png",
+    src: viteIcon,
     alt: "vite icon",
   },
   {
-    src: "/icons/analytics-amazon-athena.png",
+    src: analyticsAmazonAthenaIcon,
     alt: "analytics-amazon-athena icon",
   },
   {
-    src: "/icons/django.png",
+    src: djangoIcon,
     alt: "django icon",
   },
   {
-    src: "/icons/flask.png",
+    src: flaskIcon,
     alt: "flask icon",
   },
   {
-    src: "/icons/aws-cloudwatch.png",
+    src: awsCloudwatchIcon,
     alt: "aws-cloudwatch icon",
   },
   {
-    src: "/icons/fast-api.png",
+    src: fastApiIcon,
     alt: "fast-api icon",
   },
   {
-    src: "/icons/aws-dynamodb.png",
+    src: awsDynamodbIcon,
     alt: "aws-dynamodb icon",
   },
   {
-    src: "/icons/jotai.png",
+    src: jotaiIcon,
     alt: "jotai icon",
   },
   {
-    src: "/icons/recoil.png",
+    src: recoilIcon,
     alt: "recoil icon",
   },
   {
-    src: "/icons/elastic-search.png",
+    src: elasticSearchIcon,
     alt: "elastic-search icon",
   },
   {
-    src: "/icons/redux.png",
+    src: reduxIcon,
     alt: "redux icon",
   },
   {
-    src: "/icons/aws-ec2.png",
+    src: awsEc2Icon,
     alt: "aws-ec2 icon",
   },
   {
-    src: "/icons/aws-lambda.png",
+    src: awsLambdaIcon,
     alt: "aws-lambda icon",
   },
   {
-    src: "/icons/aws-sqs-simple-queue-service.png",
+    src: awsSqsSimpleQueueServiceIcon,
     alt: "aws-sqs-simple-queue-service icon",
   },
   {
-    src: "/icons/ant-design.png",
+    src: antDIcon,
     alt: "ant-design icon",
   },
   {
-    src: "/icons/element.png",
+    src: elementIcon,
     alt: "element icon",
   },
   {
-    src: "/icons/material-ui.png",
+    src: materialUiIcon,
     alt: "material-ui icon",
   },
   {
-    src: "/icons/styled-components.png",
+    src: styledComponentsIcon,
     alt: "styled-components icon",
   },
   {
-    src: "/icons/tailwind-css.png",
+    src: tailwindCssIcon,
     alt: "tailwind-css icon",
   },
   {
-    src: "/icons/database-amazon-rds.png",
+    src: databaseAmazonRdsIcon,
     alt: "database-amazon-rds icon",
   },
-];
+]
