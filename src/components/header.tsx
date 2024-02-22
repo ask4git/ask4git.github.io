@@ -8,8 +8,6 @@ import { motion, useAnimation } from "framer-motion"
 
 import { MainContext } from "@/contexts/main"
 
-import logo from "@/assets/images/logo.png"
-
 const shakeAnimation = {
   scale: [1, 1.1, 1.05, 1.1, 1], // 확대/축소
   rotate: [0, 3, -3, 1, -1, 0], // 회전
@@ -49,7 +47,13 @@ export const Header = () => {
           onMouseLeave={() => controls.start({ scale: 1, rotate: 0 })}
         >
           <Link href="/">
-            <Image src={logo} width={312} height={24} alt="codekit logo" />
+            <Image
+              src="/images/logo.png"
+              width={312}
+              height={24}
+              alt="codekit logo"
+            />
+            {/* <Image src={logo} width={312} height={24} alt="codekit logo" /> */}
           </Link>
         </motion.h1>
         <ul className="flex items-center gap-8">

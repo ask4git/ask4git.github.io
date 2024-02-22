@@ -7,8 +7,6 @@ import { motion } from "framer-motion"
 
 import { MainContext } from "@/contexts/main"
 
-import logo from "@/assets/images/logo.png"
-
 export const Footer = () => {
   const { pageScrollY } = useContext(MainContext)
   const pathname = usePathname()
@@ -37,7 +35,13 @@ export const Footer = () => {
             })
           }}
         >
-          <Image src={logo} width={128} height={24} alt="codekit logo" />
+          <Image
+            src="/images/logo.png"
+            width={128}
+            height={24}
+            alt="codekit logo"
+          />
+          {/* <Image src={logo} width={128} height={24} alt="codekit logo" /> */}
         </motion.span>
         <motion.p
           initial={{
