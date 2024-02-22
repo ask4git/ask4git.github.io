@@ -47,12 +47,18 @@ export const Header = () => {
           onMouseLeave={() => controls.start({ scale: 1, rotate: 0 })}
         >
           <Link href="/">
-            <Image
+            <img
               src="/images/logo.png"
               width={312}
               height={24}
               alt="codekit logo"
             />
+            {/* <Image
+              src="/images/logo.png"
+              width={312}
+              height={24}
+              alt="codekit logo"
+            /> */}
             {/* <Image src={logo} width={312} height={24} alt="codekit logo" /> */}
           </Link>
         </motion.h1>

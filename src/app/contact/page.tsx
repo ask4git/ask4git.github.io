@@ -1,4 +1,15 @@
+import type { Metadata } from "next"
+
 import { ContactForm } from "@/components/contact-form"
+
+export const metadata: Metadata = {
+  robots: {
+    index: false,
+    googleBot: {
+      index: false,
+    },
+  },
+}
 
 const ContactPage = () => {
   return (

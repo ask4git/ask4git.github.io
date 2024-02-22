@@ -37,12 +37,13 @@ export const LeadContact = () => {
         transition={{ ease: [0.17, 0.67, 0.83, 0.67], duration: 0.4 }}
         className="w-40 h-40 absolute top-0 left-72"
       >
-        <Image
+        <img src="/icons/thorus_knot.png" alt="thorus_knot icon" />
+        {/* <Image
           fill
           src={thorusKnot}
           alt="thorus_knot icon"
           sizes="(max-width: 100%)"
-        />
+        /> */}
       </motion.div>
       <motion.div
         initial={{
@@ -60,12 +61,13 @@ export const LeadContact = () => {
         }}
         className="w-48 h-48 absolute top-16 right-72"
       >
-        <Image
+        <img src="/icons/continuous-sphere.png" alt="continuous sphere icon" />
+        {/* <Image
           fill
           src={continuousSphere}
           alt="continuous sphere icon"
           sizes="(max-width: 100%)"
-        />
+        /> */}
       </motion.div>
       <motion.div
         initial={{
@@ -82,8 +84,10 @@ export const LeadContact = () => {
           delay: 0.5,
         }}
         className="w-96 h-64 absolute left-32 bottom-0"
+        // className="w-96 h-64 absolute left-32 bottom-0"
       >
-        <Image fill src={helix} alt="helix icon" sizes="(max-width: 100%)" />
+        <img src="/icons/helix.png" alt="helix icon" className="h-full" />
+        {/* <Image fill src={helix} alt="helix icon" sizes="(max-width: 100%)" /> */}
       </motion.div>
       <motion.div
         initial={{
@@ -101,7 +105,8 @@ export const LeadContact = () => {
         }}
         className="w-64 h-44 absolute right-48 bottom-0"
       >
-        <Image fill src={sphere} alt="sphere icon" sizes="(max-width: 100%)" />
+        <img src={"/icons/sphere.png"} alt="sphere icon" className="h-full" />
+        {/* <Image fill src={sphere} alt="sphere icon" sizes="(max-width: 100%)" /> */}
       </motion.div>
       <motion.p className="absolute text-[5rem] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-bold">
         {textArray.map((value, index) => {

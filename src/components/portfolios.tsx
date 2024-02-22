@@ -1,23 +1,23 @@
-"use client";
+"use client"
 
-import Image from "next/image";
-import { motion } from "framer-motion";
+import Image from "next/image"
+import { motion } from "framer-motion"
 
-import { modifiedRotateArray } from "@/lib";
-import { PORTFOLIOS } from "@/constants/portfolios";
+import { modifiedRotateArray } from "@/lib"
+import { PORTFOLIOS } from "@/constants/portfolios"
 
 export const Portfolios = () => {
   return (
     <div className="flex items-center pb-72 max-w-[1320px] m-auto">
       <div className="w-[full] gap-8 gap-y-8 grid grid-cols-2">
         {PORTFOLIOS.map((portfolio, index) => {
-          const inverseRatio = portfolio.isInverse;
+          const inverseRatio = portfolio.isInverse
 
           const style = {
             ...(inverseRatio && { maxWidth: "30%" }),
-          };
+          }
 
-          const rotateValue = modifiedRotateArray;
+          const rotateValue = modifiedRotateArray
           return (
             <motion.div
               initial={{ opacity: 0, scale: 0 }}
@@ -35,15 +35,22 @@ export const Portfolios = () => {
                 rotate: rotateValue,
               }}
             >
-              <Image
+              <img
                 width={198}
                 height={40}
                 src={portfolio.src}
                 alt={portfolio.alt}
                 style={style}
               />
+              {/* <Image
+                width={198}
+                height={40}
+                src={portfolio.src}
+                alt={portfolio.alt}
+                style={style}
+              /> */}
             </motion.div>
-          );
+          )
         })}
       </div>
 
@@ -92,5 +99,5 @@ export const Portfolios = () => {
         </motion.p>
       </h4>
     </div>
-  );
-};
+  )
+}

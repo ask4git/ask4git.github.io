@@ -1,8 +1,8 @@
-"use client";
-import { SKILLS } from "@/constants/skills";
-import { motion } from "framer-motion";
-import Image from "next/image";
-const rotateArray = [0, 3, -3, 1, -1, 0];
+"use client"
+import { SKILLS } from "@/constants/skills"
+import { motion } from "framer-motion"
+import Image from "next/image"
+const rotateArray = [0, 3, -3, 1, -1, 0]
 
 export const Summary = () => {
   return (
@@ -59,11 +59,11 @@ export const Summary = () => {
         {SKILLS.map((skill, index) => {
           const modifiedArray = rotateArray.map((value) => {
             if (value !== 0) {
-              const randomValue = Math.floor(Math.random() * 10) - 2;
-              return randomValue;
+              const randomValue = Math.floor(Math.random() * 10) - 2
+              return randomValue
             }
-            return value;
-          });
+            return value
+          })
 
           return (
             <motion.li
@@ -80,18 +80,23 @@ export const Summary = () => {
               key={index}
             >
               <div className="w-full h-full relative before:content-[''] before:pb-[100%] before:block">
-                <Image
+                <img
+                  src={skill.src}
+                  alt={skill.alt}
+                  className="absolute top-0 left-0 w-full h-full"
+                />
+                {/* <Image
                   src={skill.src}
                   alt={skill.alt}
                   fill
                   className="absolute top-0 left-0 w-full h-full"
                   sizes="(max-width: 100%)"
-                />
+                /> */}
               </div>
             </motion.li>
-          );
+          )
         })}
       </motion.ul>
     </div>
-  );
-};
+  )
+}

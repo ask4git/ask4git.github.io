@@ -35,12 +35,18 @@ export const Footer = () => {
             })
           }}
         >
-          <Image
+          <img
             src="/images/logo.png"
             width={128}
             height={24}
             alt="codekit logo"
           />
+          {/* <Image
+            src="/images/logo.png"
+            width={128}
+            height={24}
+            alt="codekit logo"
+          /> */}
           {/* <Image src={logo} width={128} height={24} alt="codekit logo" /> */}
         </motion.span>
         <motion.p
