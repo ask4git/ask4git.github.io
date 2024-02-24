@@ -1,48 +1,50 @@
-"use client"
+"use client";
 
-import { FormEvent, useState } from "react"
+import { FormEvent, useState } from "react";
 
-import { FORM_PROPERTY } from "@/constants/form"
-import { EMAIL_URL } from "@/constants/email"
+import { FORM_PROPERTY } from "@/constants/form";
+import { EMAIL_URL } from "@/constants/email";
 
 export const ContactForm = () => {
-  const [isLoading, setIsLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
+    e.preventDefault();
 
     if (isLoading) {
-      return
+      return;
     }
 
-    const formEl = e.currentTarget as HTMLFormElement
+    const formEl = e.currentTarget as HTMLFormElement;
 
-    const formData = new FormData(formEl)
+    const formData = new FormData(formEl);
 
-    const transFormData: Record<string, any> = {}
+    const transFormData: Record<string, any> = {};
 
     for (const key of formData.keys()) {
-      const value = formData.get(key)
+      const value = formData.get(key);
 
       if (FORM_PROPERTY[key] && !value) {
-        return alert(FORM_PROPERTY[key])
+        return alert(FORM_PROPERTY[key]);
       }
 
-      transFormData[key] = value
+      transFormData[key] = value;
     }
 
     try {
-      setIsLoading(true)
+      setIsLoading(true);
     } catch (error) {}
 
     const encoded = Object.keys(transFormData)
       .map(
         (key) =>
-          encodeURIComponent(key) + "=" + encodeURIComponent(transFormData[key])
+          encodeURIComponent(key) +
+          "=" +
+          encodeURIComponent(transFormData[key]),
       )
-      .join("&")
+      .join("&");
 
-    setIsLoading(true)
+    setIsLoading(true);
 
     fetch(EMAIL_URL, {
       redirect: "follow",
@@ -55,17 +57,17 @@ export const ContactForm = () => {
     })
       .then((res) => {
         if (res.status >= 400) {
-          throw Error()
+          throw Error();
         }
-        alert("정상적으로 요청이 전송되었습니다.")
+        alert("정상적으로 요청이 전송되었습니다.");
       })
       .catch(() => {
-        alert("오류가 발생했습니다. 잠시 후 다시 시도해 주세요.")
+        alert("오류가 발생했습니다. 잠시 후 다시 시도해 주세요.");
       })
       .finally(() => {
-        setIsLoading(false)
-      })
-  }
+        setIsLoading(false);
+      });
+  };
 
   return (
     <div className="mt-28 w-full flex justify-center">
@@ -191,5 +193,5 @@ export const ContactForm = () => {
         </form>
       </div>
     </div>
-  )
-}
+  );
+};

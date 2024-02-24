@@ -1,6 +1,6 @@
-import type { Metadata } from "next"
+import type { Metadata } from "next";
 
-import { ContactForm } from "@/components/contact-form"
+import { ContactForm } from "@/components/contact-form";
 
 export const metadata: Metadata = {
   robots: {
@@ -9,13 +9,14 @@ export const metadata: Metadata = {
       index: false,
     },
   },
-}
+};
 
 const ContactPage = () => {
   return (
     <main className="flex flex-col flex-1">
       <ContactForm />
     </main>
-  )
-}
-export default ContactPage
+  );
+};
+
+export default ContactPage;

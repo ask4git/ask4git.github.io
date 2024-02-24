@@ -1,15 +1,15 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import { usePathname } from "next/navigation"
-import { useContext } from "react"
-import { motion } from "framer-motion"
+import Image from "next/image";
+import { usePathname } from "next/navigation";
+import { useContext } from "react";
+import { motion } from "framer-motion";
 
-import { MainContext } from "@/contexts/main"
+import { MainContext } from "@/contexts/main";
 
 export const Footer = () => {
-  const { pageScrollY } = useContext(MainContext)
-  const pathname = usePathname()
+  const { pageScrollY } = useContext(MainContext);
+  const pathname = usePathname();
 
   return (
     <footer className="bg-[#b0b0b0] w-full">
@@ -32,7 +32,7 @@ export const Footer = () => {
             scrollTo({
               top: 0,
               behavior: "smooth",
-            })
+            });
           }}
         >
           <img
@@ -66,5 +66,5 @@ export const Footer = () => {
         </motion.p>
       </div>
     </footer>
-  )
-}
+  );
+};

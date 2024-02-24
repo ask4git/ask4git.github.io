@@ -1,25 +1,25 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import Link from "next/link"
-import { usePathname } from "next/navigation"
-import { useContext } from "react"
-import { motion, useAnimation } from "framer-motion"
+import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useContext } from "react";
+import { motion, useAnimation } from "framer-motion";
 
-import { MainContext } from "@/contexts/main"
+import { MainContext } from "@/contexts/main";
 
 const shakeAnimation = {
   scale: [1, 1.1, 1.05, 1.1, 1], // 확대/축소
   rotate: [0, 3, -3, 1, -1, 0], // 회전
   transition: { duration: 1 },
-}
+};
 
 export const Header = () => {
-  const { pageScrollY } = useContext(MainContext)
-  const pathname = usePathname()
-  const controls = useAnimation()
+  const { pageScrollY } = useContext(MainContext);
+  const pathname = usePathname();
+  const controls = useAnimation();
 
-  const isContactPage = pathname === "/contact"
+  const isContactPage = pathname === "/contact";
 
   return (
     <motion.header
@@ -72,5 +72,5 @@ export const Header = () => {
         </ul>
       </div>
     </motion.header>
-  )
-}
+  );
+};

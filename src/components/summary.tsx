@@ -1,8 +1,8 @@
-"use client"
-import { SKILLS } from "@/constants/skills"
-import { motion } from "framer-motion"
-import Image from "next/image"
-const rotateArray = [0, 3, -3, 1, -1, 0]
+"use client";
+import { SKILLS } from "@/constants/skills";
+import { motion } from "framer-motion";
+import Image from "next/image";
+const rotateArray = [0, 3, -3, 1, -1, 0];
 
 export const Summary = () => {
   return (
@@ -59,11 +59,11 @@ export const Summary = () => {
         {SKILLS.map((skill, index) => {
           const modifiedArray = rotateArray.map((value) => {
             if (value !== 0) {
-              const randomValue = Math.floor(Math.random() * 10) - 2
-              return randomValue
+              const randomValue = Math.floor(Math.random() * 10) - 2;
+              return randomValue;
             }
-            return value
-          })
+            return value;
+          });
 
           return (
             <motion.li
@@ -94,9 +94,9 @@ export const Summary = () => {
                 /> */}
               </div>
             </motion.li>
-          )
+          );
         })}
       </motion.ul>
     </div>
-  )
-}
+  );
+};

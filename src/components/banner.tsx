@@ -1,5 +1,5 @@
-"use client"
-import { motion } from "framer-motion"
+"use client";
+import { motion } from "framer-motion";
 
 const Banner = () => {
   return (
@@ -71,7 +71,7 @@ const Banner = () => {
         </motion.p>
       </h4>
     </div>
-  )
-}
+  );
+};
 
-export default Banner
+export default Banner;

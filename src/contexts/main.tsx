@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
-import { createContext, useEffect, useState } from "react"
-import { useMotionValueEvent, useScroll } from "framer-motion"
-import { usePathname } from "next/navigation"
+import { createContext, useEffect, useState } from "react";
+import { useMotionValueEvent, useScroll } from "framer-motion";
+import { usePathname } from "next/navigation";
 
 type MainContextType = {
-  pageScrollY: number
-}
+  pageScrollY: number;
+};
 
 console.log(`  
 ██████╗ ██████╗ ██████╗ ███████╗██╗  ██╗██╗████████╗
@@ -15,29 +15,29 @@ console.log(`
 ██║     ██║   ██║██║  ██║██╔══╝  ██╔═██╗ ██║   ██║   
 ╚██████╗╚██████╔╝██████╔╝███████╗██║  ██╗██║   ██║   
  ╚═════╝ ╚═════╝ ╚═════╝ ╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝     
-`)
+`);
 
 export const MainContext = createContext<MainContextType>({
   pageScrollY: 0,
-})
+});
 
 export const MainContextProvider = ({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) => {
-  const pathname = usePathname()
-  const [pageScrollY, setPageScrollY] = useState(0)
+  const pathname = usePathname();
+  const [pageScrollY, setPageScrollY] = useState(0);
 
-  const { scrollYProgress } = useScroll()
+  const { scrollYProgress } = useScroll();
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    setPageScrollY(latest * 100)
-  })
+    setPageScrollY(latest * 100);
+  });
 
   useEffect(() => {
-    setPageScrollY(0)
-  }, [pathname])
+    setPageScrollY(0);
+  }, [pathname]);
 
   return (
     <MainContext.Provider
@@ -47,5 +47,5 @@ export const MainContextProvider = ({
     >
       {children}
     </MainContext.Provider>
-  )
-}
+  );
+};

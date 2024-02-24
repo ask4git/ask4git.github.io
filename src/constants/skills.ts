@@ -95,7 +95,7 @@ export const SKILLS = [
     src: "/icons/database-amazon-rds.png",
     alt: "database-amazon-rds icon",
   },
-]
+];
 
 // import reactIcon from "@/assets/icons/react-js.png"
 // import vueIcon from "@/assets/icons/vue-js.png"
