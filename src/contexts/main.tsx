@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 
 type MainContextType = {
   pageScrollY: number;
+  isMobile: boolean;
 };
 
 console.log(`  
@@ -19,6 +20,7 @@ console.log(`
 
 export const MainContext = createContext<MainContextType>({
   pageScrollY: 0,
+  isMobile: false,
 });
 
 export const MainContextProvider = ({
@@ -28,6 +30,7 @@ export const MainContextProvider = ({
 }) => {
   const pathname = usePathname();
   const [pageScrollY, setPageScrollY] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
 
   const { scrollYProgress } = useScroll();
 
@@ -39,10 +42,23 @@ export const MainContextProvider = ({
     setPageScrollY(0);
   }, [pathname]);
 
+  useEffect(() => {
+    const handleWindowResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    window.addEventListener("resize", handleWindowResize);
+
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  }, []);
+
   return (
     <MainContext.Provider
       value={{
         pageScrollY,
+        isMobile,
       }}
     >
       {children}
