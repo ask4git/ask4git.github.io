@@ -13,7 +13,7 @@ export const Footer = () => {
 
   return (
     <footer className="bg-[#b0b0b0] w-full">
-      <div className="flex items-center h-24 gap-4 justify-center">
+      <div className="flex items-center h-16 md:h-24 gap-4 justify-center">
         <motion.span
           initial={{
             opacity: 0,
