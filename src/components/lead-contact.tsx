@@ -24,12 +24,9 @@ export const LeadContact = () => {
   const controls = useAnimation();
 
   return (
-    <div className="h-lvh relative">
+    <div className="h-[26rem] md:h-lvh relative">
       <motion.div
-        initial={{
-          opacity: 0,
-          scale: 0,
-        }}
+        initial={{ opacity: 0, scale: 0 }}
         animate={{
           opacity: pageScrollY > 90 ? 1 : 0,
           scale: pageScrollY > 90 ? [1, 1.2, 1.05, 1.1, 1] : 0,
@@ -46,10 +43,7 @@ export const LeadContact = () => {
         /> */}
       </motion.div>
       <motion.div
-        initial={{
-          opacity: 0,
-          scale: 0,
-        }}
+        initial={{ opacity: 0, scale: 0 }}
         animate={{
           opacity: pageScrollY > 90 ? 1 : 0,
           scale: pageScrollY > 90 ? [1, 1.2, 1.05, 1.1, 1] : 0,
@@ -70,10 +64,7 @@ export const LeadContact = () => {
         /> */}
       </motion.div>
       <motion.div
-        initial={{
-          opacity: 0,
-          scale: 0,
-        }}
+        initial={{ opacity: 0, scale: 0 }}
         animate={{
           opacity: pageScrollY > 90 ? 1 : 0,
           scale: pageScrollY > 90 ? [1, 1.2, 1.05, 1.1, 1] : 0,
@@ -90,10 +81,7 @@ export const LeadContact = () => {
         {/* <Image fill src={helix} alt="helix icon" sizes="(max-width: 100%)" /> */}
       </motion.div>
       <motion.div
-        initial={{
-          opacity: 0,
-          scale: 0,
-        }}
+        initial={{ opacity: 0, scale: 0 }}
         animate={{
           opacity: pageScrollY > 90 ? 1 : 0,
           scale: pageScrollY > 90 ? [1, 1.2, 1.05, 1.1, 1] : 0,
@@ -108,19 +96,14 @@ export const LeadContact = () => {
         <img src={"/icons/sphere.png"} alt="sphere icon" className="h-full" />
         {/* <Image fill src={sphere} alt="sphere icon" sizes="(max-width: 100%)" /> */}
       </motion.div>
-      <motion.p className="absolute text-[5rem] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-bold">
+
+      <motion.p className="absolute w-full text-center text-3xl md:text-7xl top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-bold">
         {textArray.map((value, index) => {
           return (
             <motion.span
               initial={{ opacity: 0, scale: 0 }}
-              whileInView={{
-                opacity: 1,
-                scale: 1,
-              }}
-              transition={{
-                duration: 0.6,
-                delay: index * 0.1,
-              }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
               key={index}
             >
               {value}
@@ -128,6 +111,7 @@ export const LeadContact = () => {
           );
         })}
       </motion.p>
+
       <motion.button
         initial={{
           opacity: 0,
@@ -148,7 +132,7 @@ export const LeadContact = () => {
         animate={controls}
         onMouseEnter={() => controls.start(shakeAnimation)}
         onMouseLeave={() => controls.start({ scale: 1, rotate: 0 })}
-        className="bg-[#7e02ff] rounded-[2rem] flex items-center justify-center w-56 h-16 text-white absolute cursor-pointer text-[2rem] font-bold top-1/2 left-1/2 -translate-x-1/2 translate-y-24"
+        className="bg-[#7e02ff] rounded-[2rem] flex items-center justify-center w-36 h-9 md:w-56 md:h-16 text-white absolute cursor-pointer text-[1rem] md:text-[2rem] font-bold top-1/2 left-1/2 -translate-x-1/2 translate-y-24"
         onClick={() => {
           router.push("/contact");
           // new Promise(() => {
