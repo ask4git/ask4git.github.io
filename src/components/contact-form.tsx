@@ -71,14 +71,16 @@ export const ContactForm = () => {
 
   return (
     <div className="mt-28 w-full flex justify-center">
-      <div className="bg-white rounded-2xl p-8 w-full max-w-[1320px]">
-        <h2 className="text-5xl text-center uppercase font-bold">contact</h2>
+      <div className="bg-white rounded-2xl p-4 md:p-8 w-full max-w-[1320px]">
+        <h2 className="text-3xl md:text-5xl text-center uppercase font-bold">
+          contact
+        </h2>
         <form className="py-8 max-w-[1120px] m-auto" onSubmit={handleSubmit}>
-          <div className="grid grid-cols-2 gap-5">
-            <div className="flex items-center justify-between">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div className="md:flex md:items-center md:justify-between">
               <label
                 htmlFor="team-name"
-                className="after:content-['*'] after:text-[#ff0000] text-xl font-bold"
+                className="after:content-['*'] after:md:text-[#ff0000] after:text-[#7e02ff] md:text-xl font-bold"
               >
                 조직명
               </label>
@@ -87,12 +89,12 @@ export const ContactForm = () => {
                 type="text"
                 placeholder="e.g. ) team codekit"
                 name="team-name"
-                className="border border-[#e2e2e2] rounded-lg w-[410px] h-12 px-6 py-4"
+                className="border border-[#e2e2e2] rounded-lg w-full md:w-[410px] h-12 px-6 py-4 mt-2 md:mt-0"
               />
             </div>
-            <div className="flex items-center justify-between">
+            <div className="md:flex md:items-center md:justify-between">
               <label
-                className="after:content-['*'] after:text-[#ff0000] text-xl font-bold"
+                className="after:content-['*'] after:md:text-[#ff0000] after:text-[#7e02ff] md:text-xl font-bold"
                 htmlFor="manager-name"
               >
                 담당자명
@@ -102,13 +104,13 @@ export const ContactForm = () => {
                 type="text"
                 placeholder="e.g. ) 김코드"
                 name="manager-name"
-                className="border border-[#e2e2e2] rounded-lg w-[410px] h-12 px-6 py-4"
+                className="border border-[#e2e2e2] rounded-lg w-full md:w-[410px] h-12 px-6 py-4 mt-2 md:mt-0"
               />
             </div>
-            <div className="flex items-center justify-between">
+            <div className="md:flex md:items-center md:justify-between">
               <label
                 htmlFor="phone-number"
-                className="after:content-['*'] after:text-[#ff0000] text-xl font-bold"
+                className="after:content-['*'] after:md:text-[#ff0000] after:text-[#7e02ff] md:text-xl font-bold"
               >
                 휴대폰번호
               </label>
@@ -117,13 +119,13 @@ export const ContactForm = () => {
                 type="tel"
                 placeholder="e.g. ) 010-1234-1234"
                 name="phone-number"
-                className="border border-[#e2e2e2] rounded-lg w-[410px] h-12 px-6 py-4"
+                className="border border-[#e2e2e2] rounded-lg w-full md:w-[410px] h-12 px-6 py-4 mt-2 md:mt-0"
               />
             </div>
-            <div className="flex items-center justify-between">
+            <div className="md:flex md:items-center md:justify-between">
               <label
                 htmlFor="email"
-                className="after:content-['*'] after:text-[#ff0000] text-xl font-bold"
+                className="after:content-['*'] after:md:text-[#ff0000] after:text-[#7e02ff] md:text-xl font-bold"
               >
                 이메일
               </label>
@@ -132,11 +134,11 @@ export const ContactForm = () => {
                 placeholder="e.g. ) ask@codekit.im"
                 name="email"
                 id="email"
-                className="border border-[#e2e2e2] rounded-lg w-[410px] h-12 px-6 py-4"
+                className="border border-[#e2e2e2] rounded-lg w-full md:w-[410px] h-12 px-6 py-4 mt-2 md:mt-0"
               />
             </div>
-            <div className="flex items-center justify-between">
-              <label className="text-xl font-bold" htmlFor="company-contact">
+            <div className="md:flex md:items-center md:justify-between">
+              <label className="md:text-xl font-bold" htmlFor="company-contact">
                 회사연락처
               </label>
               <input
@@ -144,28 +146,32 @@ export const ContactForm = () => {
                 placeholder="e.g. ) 02-5678-5678"
                 name="company-contact"
                 id="company-contact"
-                className="border border-[#e2e2e2] rounded-lg w-[410px] h-12 px-6 py-4"
+                className="border border-[#e2e2e2] rounded-lg w-full md:w-[410px] h-12 px-6 py-4 mt-2 md:mt-0"
               />
             </div>
           </div>
-          <div className="flex items-center justify-between mt-5">
-            <label className="text-xl font-bold" htmlFor="existing-services">
+
+          <div className="md:flex md:items-center md:justify-between mt-5">
+            <label className="md:text-xl font-bold" htmlFor="existing-services">
               기존 서비스
             </label>
             <input
-              className="border border-[#e2e2e2] rounded-lg w-[980px] h-12 px-6 py-4"
+              className="border border-[#e2e2e2] rounded-lg w-full md:w-[980px] h-12 px-6 py-4 mt-2 md:mt-0"
               type="text"
               placeholder="e.g. ) about.codekit.im"
               id="existing-services"
               name="existing-services"
             />
           </div>
-          <div className="flex items-center justify-between mt-5">
-            <label className="text-xl font-bold" htmlFor="reference-services">
+          <div className="md:flex md:items-center md:justify-between mt-5">
+            <label
+              className="md:text-xl font-bold"
+              htmlFor="reference-services"
+            >
               참고 서비스
             </label>
             <input
-              className="border border-[#e2e2e2] rounded-lg w-[980px] h-12 px-6 py-4"
+              className="border border-[#e2e2e2] rounded-lg w-full md:w-[980px] h-12 px-6 py-4 mt-2 md:mt-0"
               type="text"
               placeholder="e.g. ) make.codekit.im"
               name="reference-services"
@@ -174,7 +180,7 @@ export const ContactForm = () => {
           </div>
           <div className="flex items-center justify-center p-3 mt-8">
             <button
-              className="relative w-36 h-14 bg-[#7e02ff] rounded-[2rem] text-white text-2xl font-bold"
+              className="relative w-28 h-10 md:w-36 md:h-14 bg-[#7e02ff] rounded-[2rem] text-white md:text-2xl font-bold"
               disabled={isLoading}
               type="submit"
             >
