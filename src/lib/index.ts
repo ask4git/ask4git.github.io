@@ -12,5 +12,6 @@ export const modifiedRotateArray = rotateArray.map((value) => {
     const randomValue = Math.floor(Math.random() * 10) - 2;
     return randomValue;
   }
+
   return value;
 });

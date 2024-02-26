@@ -1,5 +1,5 @@
-import { Footer } from "@/components/footer"
-import { Header } from "@/components/header"
+import { Footer } from "@/components/footer";
+import { Header } from "@/components/header";
 
 const Template = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -8,6 +8,6 @@ const Template = ({ children }: { children: React.ReactNode }) => {
       {children}
       <Footer />
     </>
-  )
-}
-export default Template
+  );
+};
+export default Template;

@@ -1,13 +1,13 @@
-import type { Metadata } from "next"
-import { Noto_Sans_KR } from "next/font/google"
+import type { Metadata } from "next";
+import { Noto_Sans_KR } from "next/font/google";
 
-import { cn } from "@/lib"
+import { cn } from "@/lib";
 
-import "./globals.css"
+import "./globals.css";
 
-import { MainContextProvider } from "@/contexts/main"
+import { MainContextProvider } from "@/contexts/main";
 
-const notoSansKR = Noto_Sans_KR({ subsets: ["latin"] })
+const notoSansKR = Noto_Sans_KR({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.codekit.im"),
@@ -66,23 +66,23 @@ export const metadata: Metadata = {
       },
     ],
   },
-}
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html lang="ko">
       <body
         className={cn(
           "overflow-x-hidden bg-slate-100 max-w-[1920px] m-auto flex flex-col min-h-screen",
-          notoSansKR.className
+          notoSansKR.className,
         )}
       >
         <MainContextProvider>{children}</MainContextProvider>
       </body>
     </html>
-  )
+  );
 }

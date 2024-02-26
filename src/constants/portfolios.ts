@@ -29,7 +29,7 @@ export const PORTFOLIOS = [
     alt: "kpop_etf icon",
     isInverse: false,
   },
-]
+];
 
 // import nexonIcon from "@/assets/images/nexon.png"
 // import naverOgqIcon from "@/assets/images/naver_ogq.png"
