@@ -6,4 +6,4 @@ export const FORM_PROPERTY: Record<string, any> = {
   "company-contact": null,
   "existing-services": null,
   "reference-services": null,
-}
+};
