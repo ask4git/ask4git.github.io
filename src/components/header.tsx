@@ -1,25 +1,25 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import Link from "next/link"
-import { usePathname } from "next/navigation"
-import { useContext } from "react"
-import { motion, useAnimation } from "framer-motion"
+import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useContext } from "react";
+import { motion, useAnimation } from "framer-motion";
 
-import { MainContext } from "@/contexts/main"
+import { MainContext } from "@/contexts/main";
 
 const shakeAnimation = {
   scale: [1, 1.1, 1.05, 1.1, 1], // 확대/축소
   rotate: [0, 3, -3, 1, -1, 0], // 회전
   transition: { duration: 1 },
-}
+};
 
 export const Header = () => {
-  const { pageScrollY } = useContext(MainContext)
-  const pathname = usePathname()
-  const controls = useAnimation()
+  const { pageScrollY, isMobile } = useContext(MainContext);
+  const pathname = usePathname();
+  const controls = useAnimation();
 
-  const isContactPage = pathname === "/contact"
+  const isContactPage = pathname === "/contact";
 
   return (
     <motion.header
@@ -36,9 +36,9 @@ export const Header = () => {
         paddingRight: pageScrollY > 3 ? "100px" : "0px",
       }}
       transition={{ ease: [0.17, 0.67, 0.83, 0.67], duration: 0.4 }}
-      className="w-full border-b h-24 fixed top-0"
+      className="h-11 md:h-24 w-full border-b fixed top-0"
     >
-      <div className="flex items-center justify-between h-full px-24">
+      <div className="flex items-center justify-between h-full px-4 md:px-24">
         <motion.h1
           className="cursor-pointer"
           whileHover={shakeAnimation}
@@ -49,8 +49,8 @@ export const Header = () => {
           <Link href="/">
             <img
               src="/images/logo.png"
-              width={312}
-              height={24}
+              width={isMobile ? 123 : 312}
+              height={isMobile ? 16 : 24}
               alt="codekit logo"
             />
             {/* <Image
@@ -62,15 +62,19 @@ export const Header = () => {
             {/* <Image src={logo} width={312} height={24} alt="codekit logo" /> */}
           </Link>
         </motion.h1>
-        <ul className="flex items-center gap-8">
+        <ul className="flex items-center gap-4 md:gap-8">
           <li>
-            <Link href="/">ABOUT</Link>
+            <Link href="/" className="text-xs md:text-lg">
+              ABOUT
+            </Link>
           </li>
           <li>
-            <Link href="/contact">CONTACT US</Link>
+            <Link href="/contact" className="text-xs md:text-lg">
+              CONTACT US
+            </Link>
           </li>
         </ul>
       </div>
     </motion.header>
-  )
-}
+  );
+};
