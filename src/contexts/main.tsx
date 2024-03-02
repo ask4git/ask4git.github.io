@@ -47,6 +47,8 @@ export const MainContextProvider = ({
       setIsMobile(window.innerWidth < 768);
     };
 
+    handleWindowResize();
+
     window.addEventListener("resize", handleWindowResize);
 
     return () => {
