@@ -1,5 +1,5 @@
 "use client";
-import { useContext } from "react";
+import { Fragment, useContext } from "react";
 
 import { motion } from "framer-motion";
 
@@ -42,22 +42,31 @@ const Banner = () => {
       </h4>
 
       <h4 className="self-end flex flex-col text-right text-4xl md:text-[5rem] md:leading-normal font-[900]">
-        <motion.p
-          initial={{ opacity: 0, translateX: 100 }}
-          whileInView={{ opacity: 1, translateX: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="relative w-fit self-end"
-        >
-          아이디어 {isMobile ? "이제" : null}
-        </motion.p>
-        <motion.p
-          initial={{ opacity: 0, translateX: 100 }}
-          whileInView={{ opacity: 1, translateX: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="relative w-fit"
-        >
-          {isMobile ? null : "이제"} 기다리지 마세요!
-        </motion.p>
+        {isMobile ? (
+          <Fragment>
+            <p className="relative w-fit self-end">아이디어 이제</p>
+            <p className="relative w-fit">기다리지 마세요!</p>
+          </Fragment>
+        ) : (
+          <Fragment>
+            <motion.p
+              initial={{ opacity: 0, translateX: 100 }}
+              whileInView={{ opacity: 1, translateX: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              className="relative w-fit self-end"
+            >
+              아이디어
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0, translateX: 100 }}
+              whileInView={{ opacity: 1, translateX: 0 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
+              className="relative w-fit"
+            >
+              기다리지 마세요!
+            </motion.p>
+          </Fragment>
+        )}
       </h4>
     </div>
   );
